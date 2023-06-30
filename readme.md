@@ -27,11 +27,11 @@ T2.2: dust_process_task22
 g++ -o dust_aqi dust_aqi.cpp
 ./dust_aqi >> task21.log 2>&1
 
-T2.1: dust_process_task23
+T2.3: dust_process_task23
 g++ -o dust_summary dust_summary_task23.cpp
 ./dust_summary
 
-T2.1: dust_process_task24
+T2.4: dust_process_task24
 g++ -o dust_statistic dust_statistic_task24.cpp
 ./dust_statistic
 

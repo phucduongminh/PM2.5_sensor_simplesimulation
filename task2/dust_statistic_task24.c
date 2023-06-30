@@ -77,8 +77,8 @@ int main() {
 
     fprintf(output, "id,pollution,duration\n");
     
-    int j;
-    for (int i = 0; i < numSensors; i++) {
+    int i;
+    for (i = 0; i < numSensors; i++) {
         fprintf(output, "%d,Good,%d\n", statistics[i].id, statistics[i].duration[0]);
         fprintf(output, "%d,Moderate,%d\n", statistics[i].id, statistics[i].duration[1]);
         fprintf(output, "%d,Slightly unhealthy,%d\n", statistics[i].id, statistics[i].duration[2]);
