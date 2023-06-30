@@ -8,6 +8,51 @@ struct SensorData {
     double value;
 };
 
+int maxId();
+
+void calculateSummary(const struct SensorData* sensorData, int size);
+
+int main() {
+    FILE *dataFile = fopen("dust_sensor.csv", "r");
+    if (!dataFile)
+    {
+        printf("Failed to open the data file.\n");
+        return 1;
+    }
+
+    struct SensorData *sensorData = NULL;
+    int dataSize = 0;
+    char line[100];
+
+    // Skip the header line
+    fgets(line, sizeof(line), dataFile);
+
+    while (fgets(line, sizeof(line), dataFile))
+    {
+        struct SensorData data;
+
+        sscanf(line, "%d,%[^,],%lf", &data.id, data.time, &data.value);
+
+        struct SensorData *newData = (struct SensorData *)realloc(sensorData, (dataSize + 1) * sizeof(struct SensorData));
+        if (!newData)
+        {
+            printf("Memory allocation failed.\n");
+            fclose(dataFile);
+            free(sensorData);
+            return 1;
+        }
+
+        sensorData = newData;
+        sensorData[dataSize++] = data;
+    }
+
+    fclose(dataFile);
+
+    calculateSummary(sensorData, dataSize);
+
+    return 0;
+}
+
 int maxId(){
     FILE *dataFile = fopen("dust_aqi.csv", "r");
 
@@ -115,45 +160,4 @@ void calculateSummary(const struct SensorData* sensorData, int size) {
 
     fclose(summaryFile);
     printf("Summary of dust concentration values has been calculated and stored in dust_summary.csv.\n");
-}
-
-int main() {
-    FILE *dataFile = fopen("dust_sensor.csv", "r");
-    if (!dataFile)
-    {
-        printf("Failed to open the data file.\n");
-        return 1;
-    }
-
-    struct SensorData *sensorData = NULL;
-    int dataSize = 0;
-    char line[100];
-
-    // Skip the header line
-    fgets(line, sizeof(line), dataFile);
-
-    while (fgets(line, sizeof(line), dataFile))
-    {
-        struct SensorData data;
-
-        sscanf(line, "%d,%[^,],%lf", &data.id, data.time, &data.value);
-
-        struct SensorData *newData = (struct SensorData *)realloc(sensorData, (dataSize + 1) * sizeof(struct SensorData));
-        if (!newData)
-        {
-            printf("Memory allocation failed.\n");
-            fclose(dataFile);
-            free(sensorData);
-            return 1;
-        }
-
-        sensorData = newData;
-        sensorData[dataSize++] = data;
-    }
-
-    fclose(dataFile);
-
-    calculateSummary(sensorData, dataSize);
-
-    return 0;
 }
