@@ -1,0 +1,42 @@
+////need to check
+
+Task1: 
+- Lấy dữ liệu nhập vào từ tham số dòng lệnh (default: 1 30 24)
+- Start time bằng thời gian hệ thống trừ đi duration
+- End time là thời gian hệ thống
+- Giá trị đo bụi là random, số chữ số sau dấu phải là 1, range(không có)
+- Xuất ra .csv file dust_sensor.csv
+
+
+Task2:
+Xử lý .csv file
+2.1
+- Xem giá trị đo bụi outranger(5 ÷ 550.5) thì count rồi in vào dòng đầu tiền của file dust_outlier.csv
+- Phần sau của file dust_outlier.csv in ra những dòng bị outrange đó (khó đấy)
+- Xóa những dòng outrange invalid khỏi file file dust_sensor.csv
+
+2.2
+- Tính giá trị trung bình số đo, 2:00:00 = average(1:00:00-1:59:99)
+- Từ giá trị trung bình api so sánh ra kết quả đánh giá với thang trong bảng
+- Xuất ra .csv file dust_aqi.csv
+
+2.3
+- Lấy dữ liệu nhập vào từ file dust_sensor.csv
+- Tìm giá trị max, min và trung bình của từng cảm biến (từ lúc bắt đầu đến khi kết thúc đo/ all time)
+- Thời gian của min và max dựa theo thời gian lần đầu giá trị đo xuất hiện ở cảm biến. Thời gian của giá trị TB(mean) là khoảng thời gian lấy data
+- Xuất ra file dust_summary.csv
+
+2.4
+- Lấy dữ liệu nhập vào từ file dust_aqi.csv
+- Tính tổng số giờ cho từng mức độ ô nhiễm 
+(chính là số lần xuất hiện vì cứ 1 tiếng sẽ cho trung bình 1 lần, xuất hiện trong file 2 lần tức là có 2 tiếng có trạng thái đó)
+- Xuất ra file dust_statistics.csv
+
+
+Task3:
+- Lấy dữ liệu nhập vào từ file dust_aqi.csv
+- Mã hóa data của file dust_aqi.csv thành dạng các byte HEX (gồm 15 bytes)
+- Tất cả các số biểu diễn kiểu big-endian
+- Xuất ra file hex với VD tên file [hex_filename.dat]
+**VD:
+7A 0F 02 64 80 00 C0 42 C7 99 9A 00 AD 62 7F

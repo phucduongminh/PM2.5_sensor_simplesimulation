@@ -1,0 +1,22 @@
+id,time,value,aqi,pollution
+1,2023:06:28 22:00:00,357.5,404,Extremely hazardous
+1,2023:06:28 23:00:00,360.8,405,Extremely hazardous
+1,2023:06:29 00:00:00,355.6,403,Extremely hazardous
+1,2023:06:29 01:00:00,353.3,401,Extremely hazardous
+1,2023:06:29 02:00:00,349.7,399,Hazardous
+1,2023:06:29 03:00:00,333.6,383,Hazardous
+1,2023:06:29 04:00:00,327.0,376,Hazardous
+1,2023:06:29 05:00:00,346.0,396,Hazardous
+1,2023:06:29 06:00:00,348.5,398,Hazardous
+1,2023:06:29 07:00:00,360.0,405,Extremely hazardous
+1,2023:06:29 08:00:00,341.9,391,Hazardous
+1,2023:06:29 09:00:00,319.6,369,Hazardous
+1,2023:06:29 10:00:00,337.0,386,Hazardous
+1,2023:06:29 11:00:00,368.4,409,Extremely hazardous
+1,2023:06:29 12:00:00,366.3,408,Extremely hazardous
+1,2023:06:29 13:00:00,368.1,409,Extremely hazardous
+1,2023:06:29 14:00:00,371.9,411,Extremely hazardous
+1,2023:06:29 15:00:00,333.7,383,Hazardous
+1,2023:06:29 16:00:00,340.9,390,Hazardous
+1,2023:06:29 17:00:00,360.6,405,Extremely hazardous
+1,2023:06:29 18:00:00,357.3,403,Extremely hazardous
