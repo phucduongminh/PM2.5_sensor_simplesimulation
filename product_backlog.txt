@@ -12,10 +12,12 @@ Task2:
 Xử lý .csv file
 2.1
 - Xem giá trị đo bụi outranger(5 ÷ 550.5) thì count rồi in vào dòng đầu tiền của file dust_outlier.csv
-- Phần sau của file dust_outlier.csv in ra những dòng bị outrange đó (khó đấy)
-- Xóa những dòng outrange invalid khỏi file file dust_sensor.csv
+- Phần sau của file dust_outlier.csv in ra những dòng bị outrange đó
+- Xóa những dòng outrange invalid khỏi file dust_sensor.csv
 
 2.2
+- The valid sensor values are used to perform the rest of the tasks from task 2.2
+- Đọc file dust_sensor.csv
 - Tính giá trị trung bình số đo, 2:00:00 = average(1:00:00-1:59:99)
 - Từ giá trị trung bình api so sánh ra kết quả đánh giá với thang trong bảng
 - Xuất ra .csv file dust_aqi.csv
