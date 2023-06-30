@@ -19,6 +19,7 @@ Xử lý .csv file
 - The valid sensor values are used to perform the rest of the tasks from task 2.2
 - Đọc file dust_sensor.csv
 - Tính giá trị trung bình số đo, 2:00:00 = average(1:00:00-1:59:99)
+- Khi id = nhau, giờ bằng nhau 
 - Từ giá trị trung bình api so sánh ra kết quả đánh giá với thang trong bảng
 - Xuất ra .csv file dust_aqi.csv
 
